@@ -8,34 +8,58 @@ export const Container = styled.div`
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
 `;
 
 export const NavBrand = styled.div`
   background-color: "red";
   display: flex;
   align-items: baseline;
-  flex: 1;
+  flex: 4;
+  > span {
+    z-index: 10000;
+  }
 `;
 export const StyledImage = styled(Image)`
   cursor: pointer;
 `;
 
 export const Logo = styled.h1`
-  margin-left: 0.3rem;
-  font-size: 25px;
-  font-weight: 700;
+  margin-left: 0.6rem;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 30px;
+  color: ${({ theme }) => theme.neutral.darkBlue}; ;
 `;
 export const UserCart = styled.div`
   flex: 1;
-  background-color: green;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
-export const TestHeading = styled.h1`
-  font-weight: 400;
-  font-size: 1rem;
-  margin-left: 0.3rem;
-  letter-spacing: 0.03rem;
+export const NavWrapper = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  z-index: 122;
+`;
+
+export const NavBar = styled.nav`
+  background-color: ${({ theme }) => theme.neutral.lightGrBlue};
+  position: fixed;
+  width: 40%;
+  height: 100vh;
+  left: 0;
+  z-index: 122;
+  padding: 5rem 2rem;
+`;
+export const NavItems = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+export const NavItem = styled.li`
+  font-weight: 600;
 `;

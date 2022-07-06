@@ -6,11 +6,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   main{
     max-width: 1200px;
     margin: auto;
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 `;
 
@@ -46,7 +51,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Hello</title>
         <link
-          href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
