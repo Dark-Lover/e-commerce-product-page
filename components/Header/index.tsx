@@ -1,35 +1,35 @@
+import { useState } from "react";
+import Navbar from "../Navbar";
 //prettier-ignore
-import {
-  HeaderWrapper,NavBrand,UserCart,Logo,Container,StyledImage, NavWrapper, NavBar, NavItems, NavItem,
+import {HeaderWrapper,NavBrand,UserCart,Logo,Container,StyledImage,
 } from "./HeaderStyled";
 function Header() {
+  const [menuToggle, setMenuToggle] = useState<boolean>(false);
+  useState;
   return (
     <>
       <HeaderWrapper>
         <Container>
           <NavBrand>
-            <StyledImage src="/assets/icon-menu.svg" width={18} height={16} />
+            <StyledImage
+              src={
+                menuToggle ? "/assets/icon-close.svg" : "/assets/icon-menu.svg"
+              }
+              width={18}
+              height={18}
+              onClick={() => setMenuToggle(!menuToggle)}
+            />
             <Logo>sneakers</Logo>
           </NavBrand>
           <UserCart>
             <StyledImage src="/assets/icon-cart.svg" width={20} height={20} />
             <StyledImage
               src="/assets/image-avatar.png"
-              width={20}
-              height={20}
+              width={35}
+              height={35}
             />
           </UserCart>
-          <NavWrapper>
-            <NavBar>
-              <NavItems>
-                <NavItem>Collections</NavItem>
-                <NavItem>Men</NavItem>
-                <NavItem>Women</NavItem>
-                <NavItem>About</NavItem>
-                <NavItem>Contact</NavItem>
-              </NavItems>
-            </NavBar>
-          </NavWrapper>
+          <Navbar menuState={menuToggle} />
         </Container>
       </HeaderWrapper>
     </>

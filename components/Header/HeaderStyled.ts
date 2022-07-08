@@ -8,6 +8,9 @@ export const Container = styled.div`
   max-width: 1200px;
   margin: auto;
   display: flex;
+  @media (min-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const NavBrand = styled.div`
@@ -15,8 +18,13 @@ export const NavBrand = styled.div`
   display: flex;
   align-items: baseline;
   flex: 4;
-  > span {
-    z-index: 10000;
+
+  & span {
+    z-index: 1000;
+    @media (min-width: 768px) {
+      display: none !important;
+      flex: 1;
+    }
   }
 `;
 export const StyledImage = styled(Image)`
@@ -31,35 +39,17 @@ export const Logo = styled.h1`
   color: ${({ theme }) => theme.neutral.darkBlue}; ;
 `;
 export const UserCart = styled.div`
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
+  width: 80px;
 
-export const NavWrapper = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  z-index: 122;
-`;
-
-export const NavBar = styled.nav`
-  background-color: ${({ theme }) => theme.neutral.lightGrBlue};
-  position: fixed;
-  width: 40%;
-  height: 100vh;
-  left: 0;
-  z-index: 122;
-  padding: 5rem 2rem;
-`;
-export const NavItems = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-export const NavItem = styled.li`
-  font-weight: 600;
+  @media (min-width: 768px) {
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 80px;
+    z-index: 100;
+  }
 `;

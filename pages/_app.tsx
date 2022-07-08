@@ -54,6 +54,12 @@ export default function App({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="stylesheet" type="text/css" href="/static/css/slick.css" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="/static/css/slick-theme.css"
+        />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
