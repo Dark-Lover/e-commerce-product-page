@@ -25,6 +25,7 @@ export const NavBar = styled.nav`
   left: 0;
   z-index: 122;
   padding: 5rem 2rem;
+
   @media (min-width: 768px) {
     background-color: white;
     position: relative;
@@ -39,20 +40,26 @@ export const NavItems = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
 `;
 export const NavItem = styled.li`
   font-weight: 600;
   cursor: pointer;
+  height: 100%;
   @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     position: relative;
+
     color: ${({ theme }) => theme.neutral.darkGrayishBlue};
     &::before {
       content: "";

@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import Image from "next/image";
 export const HeaderWrapper = styled.header`
-  border-bottom: 1px solid ${(props) => props.theme.primary.main};
+  /* border-bottom: 1px solid ${(props) => props.theme.primary.main}; */
   padding: 0rem 1rem;
+  height: 70px;
 `;
 export const Container = styled.div`
   max-width: 1200px;
   margin: auto;
   display: flex;
+  height: 100%;
+  align-items: c;
   @media (min-width: 768px) {
     align-items: center;
   }
@@ -16,7 +19,7 @@ export const Container = styled.div`
 export const NavBrand = styled.div`
   background-color: "red";
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex: 4;
 
   & span {
