@@ -22,12 +22,19 @@ function Header() {
             <Logo>sneakers</Logo>
           </NavBrand>
           <UserCart>
-            <StyledImage src="/assets/icon-cart.svg" width={20} height={20} />
+            <StyledImage
+              src="/assets/icon-cart.svg"
+              width={20}
+              height={20}
+              className="cart"
+            />
             <StyledImage
               src="/assets/image-avatar.png"
               width={35}
               height={35}
+              className="avatar"
             />
+            <span className="cart_count">3</span>
           </UserCart>
           <Navbar menuState={menuToggle} />
         </Container>

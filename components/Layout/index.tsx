@@ -5,7 +5,7 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
-  return <main>{children}</main>;
+  return <main style={{ maxWidth: "1200px", margin: "auto" }}>{children}</main>;
 }
 
 export default Layout;

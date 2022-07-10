@@ -20,7 +20,7 @@ export const NavWrapper = styled.div`
 export const NavBar = styled.nav`
   background-color: ${({ theme }) => theme.neutral.lightGrBlue};
   position: fixed;
-  width: 40%;
+  width: 60%;
   height: 100vh;
   left: 0;
   z-index: 122;

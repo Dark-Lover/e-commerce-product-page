@@ -32,6 +32,14 @@ export const NavBrand = styled.div`
 `;
 export const StyledImage = styled(Image)`
   cursor: pointer;
+  &.avatar {
+    border: 2px solid transparent !important;
+    transition: border 0.3s ease;
+    border-radius: 50%;
+    &:hover {
+      border: 2px solid ${(props) => props.theme.primary.main} !important;
+    }
+  }
 `;
 
 export const Logo = styled.h1`
@@ -46,7 +54,20 @@ export const UserCart = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 80px;
-
+  position: relative;
+  .cart_count {
+    position: absolute !important;
+    background-color: ${({ theme }) => theme.primary.main};
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    left: 10px;
+    top: 18px;
+  }
   @media (min-width: 768px) {
     order: 3;
     display: flex;
@@ -54,5 +75,9 @@ export const UserCart = styled.div`
     justify-content: space-between;
     min-width: 80px;
     z-index: 100;
+    .cart_count {
+      left: 10px;
+      top: 0px;
+    }
   }
 `;

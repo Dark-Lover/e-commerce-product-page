@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Pricing from "../Pricing";
 // prettier-ignore
-import {Heading, ShowLeft,ShowRight,ShowWrapper,SwitchProd,} from "./ShowcaseStyled";
+import {Heading, ShowLeft,ShowRight,ShowWrapper,SwitchProd,Paragraph} from "./ShowcaseStyled";
 
 function Showcase() {
   return (
@@ -17,6 +18,12 @@ function Showcase() {
         <Heading size="lg" color="secondary">
           Fall Limited Edition Sneakers
         </Heading>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde
+          minus, magni, qui, inventore dicta ea perspiciatis at veritatis
+          aliquam voluptatibus? Necessitatibus, quibusdam.
+        </Paragraph>
+        <Pricing />
       </ShowRight>
     </ShowWrapper>
   );

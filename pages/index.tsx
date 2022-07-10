@@ -8,8 +8,6 @@ export default function Home() {
       <Header />
       <Layout>
         <Showcase />
-        <h4>hello</h4>
-        <h5>hello</h5>
       </Layout>
     </>
   );
