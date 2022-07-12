@@ -1,13 +1,8 @@
 // prettier-ignore
+import Image from "next/image";
 import { Heading } from "../../styles/globals";
-import {
-  AddConfirm,
-  AddToCart,
-  NewPrice,
-  Price,
-  PricingWrapper,
-  Quantity,
-} from "./PricingStyled";
+// prettier-ignore
+import {AddConfirm,AddToCart,NewPrice,Price,PricingWrapper,Quantity,} from "./PricingStyled";
 
 function Pricing() {
   return (
@@ -22,8 +17,15 @@ function Pricing() {
         <span className="old_price">$250.00</span>
       </Price>
       <AddToCart>
-        <Quantity>+ 1 -</Quantity>
-        <AddConfirm></AddConfirm>
+        <Quantity>
+          <Image src="/assets/icon-minus.svg" width={10} height={5} />
+          <span className="count">0</span>
+          <Image src="/assets/icon-plus.svg" width={10} height={10} />
+        </Quantity>
+        <AddConfirm>
+          <Image src="/assets/icon-cart-white.svg" width={15} height={15} />
+          <span>Add to cart</span>
+        </AddConfirm>
       </AddToCart>
     </PricingWrapper>
   );

@@ -36,5 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# design
+# design and todo
 /design
+todo.txt

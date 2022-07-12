@@ -6,7 +6,7 @@ interface NavbarProps {
   menuState: boolean;
 }
 function Navbar({ menuState }: NavbarProps) {
-  const matches = useMediaQuery(768);
+  const matches = useMediaQuery(767);
   console.log(matches);
   return menuState ? (
     <NavWrapper>
