@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 function Navbar({ menuState }: NavbarProps) {
   const matches = useMediaQuery(767);
-  console.log(matches);
+
   return menuState ? (
     <NavWrapper>
       <NavBar>

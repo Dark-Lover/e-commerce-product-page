@@ -35,6 +35,8 @@ export const ShowLeft = styled.div`
   }
 `;
 export const ProductImage = styled.div`
+  position: relative;
+  height: 100%;
   img {
     object-fit: cover;
     height: 100%;
@@ -109,19 +111,5 @@ export const Paragraph = styled.p`
   @media (min-width: 768px) {
     font-size: 1.1rem;
     max-width: 450px;
-  }
-`;
-
-// Thumbnails on desktop
-
-export const Thumbnails = styled.div`
-  position: relative;
-  padding: 1rem 0;
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  img {
-    border-radius: 0.5rem;
   }
 `;

@@ -1,42 +1,55 @@
 import Image from "next/image";
 import Pricing from "../Pricing";
+import Thumbnail from "../Thumbnail";
+import ThumbnailList from "../ThumbnailList";
+import { ProductThumbnails } from "../../data/Products";
 // prettier-ignore
-import {Heading, ShowLeft,ShowRight,ShowWrapper,SwitchProd,Paragraph, Thumbnails, ProductImage} from "./ShowcaseStyled";
+import {Heading, ShowLeft,ShowRight,ShowWrapper,SwitchProd,Paragraph,  ProductImage} from "./ShowcaseStyled";
+import { useState } from "react";
+import { useMediaQuery } from "../../utils/mediaQuery";
 
 function Showcase() {
-  const isDesk: boolean = true;
-  // const isDesk: boolean = false;
+  const isMobile: boolean = useMediaQuery(767);
+
+  const [selected, setSelected] = useState<number>(1);
+  const next = () => {
+    if (selected === 4) {
+      setSelected(1);
+    } else setSelected((prevState) => prevState + 1);
+  };
+
+  const prev = () => {
+    if (selected === 1) {
+      setSelected(4);
+    } else {
+      setSelected((prevState) => prevState - 1);
+    }
+  };
+  // };
   return (
     <ShowWrapper>
       <ShowLeft>
         <ProductImage>
-          <Image src="/assets/image-product-1.jpg" layout="fill" />
-          <SwitchProd side="left" />
-          <SwitchProd side="right" />
+          <Image
+            src={`/assets/image-product-${selected}.jpg`}
+            layout="fill"
+            priority
+          />
+          <SwitchProd side="left" onClick={prev} />
+          <SwitchProd side="right" onClick={next} />
         </ProductImage>
-        {isDesk && (
-          <Thumbnails>
-            <Image
-              src="/assets/image-product-1-thumbnail.jpg"
-              width={100}
-              height={100}
-            />
-            <Image
-              src="/assets/image-product-1-thumbnail.jpg"
-              width={100}
-              height={100}
-            />
-            <Image
-              src="/assets/image-product-1-thumbnail.jpg"
-              width={100}
-              height={100}
-            />
-            <Image
-              src="/assets/image-product-1-thumbnail.jpg"
-              width={100}
-              height={100}
-            />
-          </Thumbnails>
+        {!isMobile && (
+          <ThumbnailList>
+            {ProductThumbnails.map(({ id, thumbnail }) => (
+              <Thumbnail
+                src={thumbnail}
+                key={id}
+                select={setSelected}
+                id={id}
+                isSel={selected === id}
+              />
+            ))}
+          </ThumbnailList>
         )}
       </ShowLeft>
       <ShowRight>

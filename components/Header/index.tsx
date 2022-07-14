@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { cartContext } from "../../utils/Context/CountProvider";
 import Navbar from "../Navbar";
 //prettier-ignore
 import {HeaderWrapper,NavBrand,UserCart,Logo,Container,StyledImage,
 } from "./HeaderStyled";
 function Header() {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
+  const { added } = useContext(cartContext);
   useState;
   return (
     <>
@@ -34,7 +36,7 @@ function Header() {
               height={35}
               className="avatar"
             />
-            <span className="cart_count">3</span>
+            <span className="cart_count">{added}</span>
           </UserCart>
           <Navbar menuState={menuToggle} />
         </Container>
