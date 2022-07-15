@@ -85,24 +85,6 @@ export const ShowRight = styled.div`
     padding: 2rem 2rem 0 2rem;
   }
 `;
-export const Heading = styled.h2<PropsHeading>`
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  ${({ size }) =>
-    size === "small"
-      ? "font-size:0.8rem ;text-transform:uppercase;font-weight: 600;letter-spacing:0.03rem"
-      : "font-size:20px;     line-height: 1.5rem;letter-spacing:0.02rem ;font-weight: 700"};
-  ${({ color, theme }) =>
-    color === "primary"
-      ? `color: ${theme.primary.main}`
-      : `color: ${theme.neutral.darkBlue}`};
-  @media (min-width: 768px) {
-    max-width: 450px;
-    ${({ size }) =>
-      size === "small" ? "font-size:1rem ;" : "font-size:24px;"};
-    margin-bottom: 1.3rem;
-  }
-`;
 
 export const Paragraph = styled.p`
   font-size: 0.9rem;

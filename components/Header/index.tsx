@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { cartContext } from "../../utils/Context/CountProvider";
+import Cart from "../Cart";
 import Navbar from "../Navbar";
 //prettier-ignore
 import {HeaderWrapper,NavBrand,UserCart,Logo,Container,StyledImage,
@@ -7,6 +8,7 @@ import {HeaderWrapper,NavBrand,UserCart,Logo,Container,StyledImage,
 function Header() {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
   const { added } = useContext(cartContext);
+  const [cartOpen, setCartOpen] = useState<boolean>(false);
   useState;
   return (
     <>
@@ -29,6 +31,7 @@ function Header() {
               width={20}
               height={20}
               className="cart"
+              onClick={() => setCartOpen(!cartOpen)}
             />
             <StyledImage
               src="/assets/image-avatar.png"
@@ -40,6 +43,7 @@ function Header() {
           </UserCart>
           <Navbar menuState={menuToggle} />
         </Container>
+        {cartOpen && <Cart />}
       </HeaderWrapper>
     </>
   );

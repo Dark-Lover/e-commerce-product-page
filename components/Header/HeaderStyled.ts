@@ -4,6 +4,7 @@ export const HeaderWrapper = styled.header`
   /* border-bottom: 1px solid ${(props) => props.theme.primary.main}; */
   padding: 0rem 1rem;
   height: 70px;
+  position: relative;
 `;
 export const Container = styled.div`
   max-width: 1200px;

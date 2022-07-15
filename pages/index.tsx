@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Showcase from "../components/Showcase";
 import React from "react";
 import CountProvider from "../utils/Context/CountProvider";
+import ModelView from "../components/Model";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Layout>
         <Showcase />
       </Layout>
+      {/* <ModelView /> */}
     </CountProvider>
   );
 }

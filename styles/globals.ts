@@ -1,25 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  /* body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  main{
-    max-width: 1200px;
-    margin: auto;
-  }
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
-  } */
 
   // new global styles
   html,
@@ -130,7 +111,7 @@ interface PropsHeading {
 export const Heading = styled.h2<PropsHeading>`
   margin-bottom: 0.5rem;
   font-weight: 600;
-  margin: ${({ size }) =>
+  ${({ size }) =>
     size === "small"
       ? "font-size:0.8rem ;text-transform:uppercase;font-weight: 600;letter-spacing:0.03rem"
       : "font-size:20px;     line-height: 1.5rem;letter-spacing:0.02rem ;font-weight: 700"};
@@ -139,4 +120,14 @@ export const Heading = styled.h2<PropsHeading>`
     color === "primary"
       ? `color: ${theme.primary.main}`
       : `color: ${theme.neutral.darkBlue}`};
+  @media (min-width: 768px) {
+    max-width: 450px;
+    ${({ size }) =>
+      size === "small" ? "font-size:1rem ;" : "font-size:24px;"};
+    margin-bottom: 1.3rem;
+  }
+`;
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

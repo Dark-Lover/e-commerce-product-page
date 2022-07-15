@@ -4,9 +4,10 @@ import Thumbnail from "../Thumbnail";
 import ThumbnailList from "../ThumbnailList";
 import { ProductThumbnails } from "../../data/Products";
 // prettier-ignore
-import {Heading, ShowLeft,ShowRight,ShowWrapper,SwitchProd,Paragraph,  ProductImage} from "./ShowcaseStyled";
+import { ShowLeft,ShowRight,ShowWrapper,SwitchProd,Paragraph,  ProductImage} from "./ShowcaseStyled";
 import { useState } from "react";
 import { useMediaQuery } from "../../utils/mediaQuery";
+import { Heading } from "../../styles/globals";
 
 function Showcase() {
   const isMobile: boolean = useMediaQuery(767);
@@ -25,7 +26,7 @@ function Showcase() {
       setSelected((prevState) => prevState - 1);
     }
   };
-  // };
+
   return (
     <ShowWrapper>
       <ShowLeft>
@@ -53,10 +54,10 @@ function Showcase() {
         )}
       </ShowLeft>
       <ShowRight>
-        <Heading size="small" color="primary">
+        <Heading size="small" color="primary" mgy={10}>
           Sneaker Company
         </Heading>
-        <Heading size="lg" color="secondary">
+        <Heading size="lg" color="secondary" mgy={10}>
           Fall Limited Edition Sneakers
         </Heading>
         <Paragraph>
