@@ -9,7 +9,12 @@ import { useState } from "react";
 import { useMediaQuery } from "../../utils/mediaQuery";
 import { Heading } from "../../styles/globals";
 
-function Showcase() {
+interface ShowcaseProps {
+  isOpen: boolean;
+  setModelOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Showcase({ isOpen, setModelOpen }: ShowcaseProps) {
   const isMobile: boolean = useMediaQuery(767);
 
   const [selected, setSelected] = useState<number>(1);
@@ -35,6 +40,7 @@ function Showcase() {
             src={`/assets/image-product-${selected}.jpg`}
             layout="fill"
             priority
+            onClick={() => setModelOpen(true)}
           />
           <SwitchProd side="left" onClick={prev} />
           <SwitchProd side="right" onClick={next} />
