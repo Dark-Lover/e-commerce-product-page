@@ -1,6 +1,6 @@
 Welcome! 👋
 
-## Bookmark landing page
+## E-commerce Product Page
 
 <p align="center"> Frontend Mentor Challenge </p>
 
@@ -8,7 +8,7 @@ Welcome! 👋
 
 ### About the project
 
-Bookmark is a NextJs with Typescript Frontend project (Landing Page).
+E-commerce product page challenge with nextjs typescript and styled components.
 
 ## Color Reference
 
